@@ -1,13 +1,124 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root{
+  --bg-Nav:#2C3E50;
+  --bg-footer:#1A252F;
+  --bg-primary:#1ABC9C;
+}
+p,h3,h1{
+  padding-bottom: 5px;
+  color: #fff;
+
+}
+i{
+  color: #fff;
+}
+.my-color{
+  color: var(--bg-Nav);
+}
+button{
+  background-color: var(--bg-primary) !important;
+  color: #fff !important;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+
+/*********NavBar**********/
+.navbar,footer{
+  background-color: var(--bg-Nav) !important;
+ 
+}
+footer{
+  padding-block: 100px !important;
+ 
+}
+
+.navbar a {
+  color: #fff !important;
+  font-weight: 700;
+  
+}
+ .navbar-brand {
+  font-size: 2rem !important;
+  
+ }
+ .active{
+  background-color: var(--bg-primary) !important;
+  border-radius: 10px;
+ }
+
+
+
+/*********NavBar**********/
+/************Footer*****/
+.icons{
+  height: 45px;
+  width: 45px;
+  cursor: pointer;
+}
+.icons i{
+  font-size: 20px;
+}
+.foot{
+  background-color: var(--bg-footer);
+}
+/************Footer*****/
+/**************Home********/
+.image{
+  width: 250px;
+  height: 250px;
+  margin: auto;
+}
+header{
+  height: 80vh;
+  background-color: var(--bg-primary);
+}
+.star{
+  position: relative;
+}
+.star::after{
+  content: "";
+  position: absolute;
+  width: 85px;
+  height: 3px;
+  background-color: rgb(255, 255, 255);
+  
+  left: 40px;
+  top: 50%;
+}
+.star::before{
+  content: "";
+  position: absolute;
+  width: 85px;
+  height: 3px;
+  background-color: rgb(255, 255, 255);
+  top: 50%;
+  right: 40px;
+}
+/**************Home********/
+/****************porto*********/
+.porto h1{
+  color: var(--bg-Nav);
+  
+}
+
+.porto .star::after,.porto .star::before{
+  background-color: var(--bg-Nav);
+}
+.imagez .layout{
+  opacity: 0;
+  background-color: var(--bg-primary);
+  transition: opacity 0.67s;
+}
+.imagez:hover .layout{
+  opacity: 0.9;
+
+}
+
+
+
+/****************porto*********/
+
+/*******contact****/
+.form-control:focus {
+  border-color: transparent; 
+  box-shadow: none; 
 }

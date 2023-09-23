@@ -1,24 +1,43 @@
 import logo from './logo.svg';
 import './App.css';
+import NavBar from './Components/NavBar/NavBar';
+import Footer from './Components/Footer/Footer';
+import MainLayout from './Components/Layout/MainLayout';
+import { createBrowserRouter,createHashRouter,RouterProvider } from 'react-router-dom';
+import Porto from './Components/Porto/Porto';
+import About from './Components/About/About';
+import Home from './Components/Home/Home';
+import Contact from './Components/Contact/Contact';
+// import MainLayout from './Components/Layout/MainLayout';
+
 
 function App() {
+  let routes=createBrowserRouter([
+    {
+      path:'/',element: <MainLayout/>,children:[
+      {path:'',element: <Home />},
+      {path:'home',element: <Home />},
+      {path:'about',element: <About/>},
+      {path:'porto',element: <Porto/>},
+      {path:'contact',element: <Contact/>}
+    ],
+  }
+   
+  ])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <>
+   
+   {/* <NavBar /> */}
+  
+  
+   <RouterProvider router={routes} />
+   <Footer />
+
+
+
+
+
+   </>
   );
 }
 
