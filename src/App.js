@@ -8,6 +8,7 @@ import Porto from './Components/Porto/Porto';
 import About from './Components/About/About';
 import Home from './Components/Home/Home';
 import Contact from './Components/Contact/Contact';
+import NotFound from './Components/NotFound/NotFound';
 // import MainLayout from './Components/Layout/MainLayout';
 
 
@@ -19,7 +20,8 @@ function App() {
       {path:'home',element: <Home />},
       {path:'about',element: <About/>},
       {path:'porto',element: <Porto/>},
-      {path:'contact',element: <Contact/>}
+      {path:'contact',element: <Contact/>},
+      {path:'*',element: <NotFound/>}
     ],
   }
    
